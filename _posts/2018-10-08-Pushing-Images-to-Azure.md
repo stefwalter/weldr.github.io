@@ -141,5 +141,8 @@ Next create an instance either with the Azure portal, or a command similar to th
     $ az vm create --resource-group $GROUP --location eastus --name $VHD --image $VHD --admin-username azure-user --generate-ssh-keys
      - Running ...
 
-Use your private key via SSH to access the resulting instance as usual. The user to log
-in as is ```azure-user```
+Private SSH keys will be written to your home directory under ```~/.ssh```. If you do not have
+any existing SSH keys, they will become your default SSH keys. The above command will print out
+an IP address to access the VM. The user to log in as is ```azure-user```
+
+    $ ssh -i ~/.ssh/id_rsa azure-user@40.76.0.100
