@@ -49,7 +49,7 @@ inject user credentials to virtual machines, we must perform that task ourselves
 the blueprint. Use the following command to extract the blueprint to a ```example-http-server.toml```
 file in the current directory:
 
-    $ composer-cli blueprints save example-http-server
+    $ sudo composer-cli blueprints save example-http-server
 
 Add the following lines to the end of the ```example-http-server.toml``` file to set
 the initial root ```password``` to ```foobar```. You can also use a crypted password
@@ -62,7 +62,7 @@ string for the ```password``` or set an SSH ```key```.
 
 Now save the blueprint back into composer with the following command:
 
-    $ composer-cli blueprints push example-http-server.toml
+    $ sudo composer-cli blueprints push example-http-server.toml
 
 We run the following command to start a compose. Notice that we pass the image type
 of ```vmdk``` which indicates we want an image appropriate for pushing to
